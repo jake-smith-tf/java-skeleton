@@ -2,14 +2,16 @@ package answers;
 
 public class Question1 {
 
-	public int merge(int a, int b)
-	{
-		return (a ^ b);
-	}
+
 
 	public static int bestMergedPortfolio(int[] portfolios) {
 		// TODO Auto-generated method stub
 		int highest = 0;
+
+		public int merge(int a, int b)
+		{
+			return (a ^ b);
+		}
 
 		for (int i = 0; i < portfolios.length; i++)
 		{
