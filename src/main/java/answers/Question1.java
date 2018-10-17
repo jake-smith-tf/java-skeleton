@@ -25,11 +25,6 @@ public class Question1 {
 		return highest;
 	}
 
-	public static void main(String[] args)
-	{
-
-	}
-
 
 
 }
