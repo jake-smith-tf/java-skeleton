@@ -1,25 +1,23 @@
 package answers;
 
 public class Question1 {
-
+	
 
 
 	public static int bestMergedPortfolio(int[] portfolios) {
 		// TODO Auto-generated method stub
 		int highest = 0;
 
-		public int merge(int a, int b)
-		{
-			return (a ^ b);
-		}
+
+
 
 		for (int i = 0; i < portfolios.length; i++)
 		{
 			for (int j = 0; j < portfolios.length; j++)
 			{
-				if (merge(portfolios[i],portfolios[j]) > highest)
+				if (portfolios[i] ^ portfolios[j] > highest)
 				{
-					highest = merge(portfolios[i],portfolios[j]);
+					highest = portfolios[i] ^ portfolios[j];
 				}
 			}
 		}
