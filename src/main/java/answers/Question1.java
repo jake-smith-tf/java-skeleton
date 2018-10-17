@@ -1,7 +1,7 @@
 package answers;
 
 public class Question1 {
-	
+
 
 
 	public static int bestMergedPortfolio(int[] portfolios) {
@@ -15,7 +15,7 @@ public class Question1 {
 		{
 			for (int j = 0; j < portfolios.length; j++)
 			{
-				if (portfolios[i] ^ portfolios[j] > highest)
+				if ((portfolios[i] ^ portfolios[j]) > highest)
 				{
 					highest = portfolios[i] ^ portfolios[j];
 				}
