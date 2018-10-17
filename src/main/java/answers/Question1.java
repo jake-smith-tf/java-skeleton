@@ -11,9 +11,9 @@ public class Question1 {
 		// TODO Auto-generated method stub
 		int highest = 0;
 
-		for (int i = 0, i < portfolios.length, i++)
+		for (int i = 0; i < portfolios.length; i++)
 		{
-			for (int j = 0, j < portfolios.length, j++)
+			for (int j = 0; j < portfolios.length; j++)
 			{
 				if (merge(portfolios[i],portfolios[j]) > highest)
 				{
