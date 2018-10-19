@@ -1,5 +1,4 @@
 package answers;
-import java.lang;
 
 public class Question1 {
 
