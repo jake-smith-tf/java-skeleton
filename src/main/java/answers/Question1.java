@@ -2,8 +2,7 @@ package answers;
 import java.lang;
 
 public class Question1 {
-
-    0b1110000 0b00011101
+    
 
 	public static int bestMergedPortfolio(int[] portfolios) {
 		// TODO Auto-generated method stub
