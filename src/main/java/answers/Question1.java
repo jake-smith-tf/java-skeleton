@@ -2,7 +2,7 @@ package answers;
 import java.lang;
 
 public class Question1 {
-    
+
 
 	public static int bestMergedPortfolio(int[] portfolios) {
 		// TODO Auto-generated method stub
@@ -29,9 +29,9 @@ public class Question1 {
 
         for (int i = 0; i < portfolios.length; i++)
         {
-            if ((portfolios[i] ^ portfolios[j]) > highest)
+            if ((highestInt ^ portfolios[i]) > highest)
             {
-                highest = highestInt ^ portfolios[j];
+                highest = highestInt ^ portfolios[i];
             }
         }
 
