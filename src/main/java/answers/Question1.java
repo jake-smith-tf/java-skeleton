@@ -19,7 +19,7 @@ public class Question1 {
                 }
             }
         }
-        return max;
+        return u;
 	}
 
 
