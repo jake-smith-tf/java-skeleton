@@ -4,50 +4,22 @@ public class Question1 {
 
 
 	public static int bestMergedPortfolio(int[] portfolios) {
-		// TODO Auto-generated method stub
-		int highest = 0;
-		//int currentShift = 0;
-        /*
-		for (int i = 0; i < portfolios.length; i++)
-		{
-			int currentPortfolio = portfolios[i];
-			int currentBit = portfolios[i] >> 15 - currentShift;
-
-		}
-		*/
-
-        //Find most left-most 1's
-        int highestInt = 0;
-        for (int i = 0; i < portfolios.length; i++)
-        {
-            if (portfolios[i] > highestInt)
-            {
-                highestInt = portfolios[i];
+        int u = 0, bitmask = 0;
+        for(int i = 31; i >= 0; i--){
+            bitmask = bitmask | (1 << i);
+            Set<Integer> set = new HashSet<>();
+            for(int portfolio : portfolios){
+                set.add(portfolio & bitmask);
+            }
+            int tmp = u | (1 << i);
+            for(int beg : set){
+                if(set.contains(tmp ^ beg)) {
+                    u = tmp;
+                    break;
+                }
             }
         }
-
-        for (int i = 0; i < portfolios.length; i++)
-        {
-            if ((highestInt ^ portfolios[i]) > highest)
-            {
-                highest = highestInt ^ portfolios[i];
-            }
-        }
-
-        /*
-		for (int i = 0; i < portfolios.length; i++)
-		{
-			for (int j = i + 1; j < portfolios.length; j++)
-			{
-				if ((portfolios[i] ^ portfolios[j]) > highest)
-				{
-					highest = portfolios[i] ^ portfolios[j];
-				}
-			}
-		}
-		*/
-		System.out.println("HIGHEST:"+highest);
-		return highest;
+        return max;
 	}
 
 
