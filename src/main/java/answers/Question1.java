@@ -12,6 +12,7 @@ public class Question1 {
                 max = (ci > max) ? ci : max;
             }
         }
+        return max;
 	}
 
 }
