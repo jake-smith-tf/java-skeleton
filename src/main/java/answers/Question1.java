@@ -4,26 +4,14 @@ import java.util.HashSet;
 
 public class Question1 {
 
-
 	public static int bestMergedPortfolio(int[] portfolios) {
-        int u = 0, bitmask = 0;
-        for(int i = 31; i >= 0; i--){
-            bitmask = bitmask | (1 << i);
-            Set<Integer> set = new HashSet<>();
-            for(int portfolio : portfolios){
-                set.add(portfolio & bitmask);
-            }
-            int tmp = u | (1 << i);
-            for(int beg : set){
-                if(set.contains(tmp ^ beg)) {
-                    u = tmp;
-                    break;
-                }
+	    int max = 0;
+        for (int i = 0; i < portfolios.count - 1; i++) {
+            for (int j = i + 1; j < portfolios.count; j++) {
+                int ci = portfolios[i] ^ portfolios[j];
+                max = (ci > max) ? ci : max;
             }
         }
-        return u;
 	}
-
-
-
+	
 }
