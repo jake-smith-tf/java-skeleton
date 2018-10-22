@@ -11,7 +11,7 @@ public class Question2 {
 			{
 				for (int bound = 0; bound < 10; bound++) {
 					int diff = Math.abs(cashflowIn[i] - cashflowOut[j]);
-					if (diff <= bound && dif <= lowest) {
+					if (diff <= bound && diff <= lowest) {
 						lowest = diff;
 					}
 				}
