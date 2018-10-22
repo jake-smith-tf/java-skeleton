@@ -15,23 +15,22 @@ public class Question6 {
 
 	public int[] fastestTo(int target)
 	{
-		int last = times[0][target];
-		int lasti = 0;
+		int[] server = {0,times[0][target]};
 		for (int i = 0; i < numServers; i++)
 		{
-			if (times[i][target] < last)
+			if (times[i][target] < server[1])
 			{
-				last = times[i][target];
-				lasti = i;
+				server[1] = times[i][target];
+				server[0] = i;
 			}
 		}
-		return {lasti,last};
+		return server;
 	}
 
 	public static int shortestServerRoute(int numServers, int targetServer, int[][] times) {
 		int time = 0;
 		Question6 question6 = new Question6(numServers,targetServer,times);
-		int[][] currentServer = {targetServer,0};
+		int[] currentServer = {targetServer,0};
 		while (currentServer[0] != 0) {
 			currentServer = question6.fastestTo(currentServer[0]);
 			time += currentServer[1];
