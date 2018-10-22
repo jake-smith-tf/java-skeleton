@@ -6,7 +6,7 @@ public class Question2 {
 		int lowestPair = 0;
 		for (int i = 0; i < cashflowIn.length; i++)
 		{
-			int lowest = Math.abs(cashflowIn[0] - cashflowOut[0])
+			int lowest = Math.abs(cashflowIn[0] - cashflowOut[0]);
 			for (int j = 0; j < cashflowOut.length; j++)
 			{
 				for (int bound = 0; bound < 10; bound++) {
@@ -18,10 +18,10 @@ public class Question2 {
 			}
 			if (lowest < lowestPair)
 			{
-				lowestPair = lowest
+				lowestPair = lowest;
 			}
 		}
-		return -1;
+		return lowestPair;
 	}
 
 }
